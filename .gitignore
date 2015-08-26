@@ -31,3 +31,9 @@ DerivedData
 # Carthage/Checkouts
 
 Carthage/Build
+
+# Project files
+
+Psychologist.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+
+.DS_Store
