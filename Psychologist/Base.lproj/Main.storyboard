@@ -67,8 +67,8 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="t4P-Oe-BeE"/>
                                         <exclude reference="XP7-uC-XBU"/>
+                                        <exclude reference="t4P-Oe-BeE"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -89,8 +89,8 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M70-zZ-xr4">
-                                <rect key="frame" x="271" y="377" width="58" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M70-zZ-xr4">
+                                <rect key="frame" x="271" y="414" width="58" height="30"/>
                                 <state key="normal" title="Nothing!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="2812" y="-128"/>
         </scene>
-        <!--Happiness View Controller-->
+        <!--Diagnosed Happiness View Controller-->
         <scene sceneID="5JI-yj-Hvx">
             <objects>
-                <viewController id="nDa-VL-1is" customClass="HappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nDa-VL-1is" customClass="DiagnosedHappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s6S-Jk-OO8"/>
                         <viewControllerLayoutGuide type="bottom" id="s6N-be-e6r"/>
@@ -161,7 +161,15 @@
                             <constraint firstAttribute="trailing" secondItem="9HP-yo-Zjs" secondAttribute="trailing" id="kL6-xZ-ZYb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IhK-QU-oRJ"/>
+                    <navigationItem key="navigationItem" id="IhK-QU-oRJ">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="75c-Z3-JRO">
+                            <connections>
+                                <segue destination="VpV-Uj-DTz" kind="popoverPresentation" identifier="Show Diagnostic History" popoverAnchorBarButtonItem="75c-Z3-JRO" id="8Y7-q0-FcC">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="9HP-yo-Zjs" id="DWi-8q-EzX"/>
                     </connections>
@@ -174,6 +182,42 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2949" y="694"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="RdL-pF-xvq">
+            <objects>
+                <viewController id="VpV-Uj-DTz" customClass="TextViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bxu-PD-azg"/>
+                        <viewControllerLayoutGuide type="bottom" id="aMx-am-9dZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eci-HH-w0J">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcF-q1-Mxw">
+                                <rect key="frame" x="0.0" y="6" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="GcF-q1-Mxw" secondAttribute="bottom" constant="-6" id="Bdd-ky-XBe"/>
+                            <constraint firstAttribute="trailing" secondItem="GcF-q1-Mxw" secondAttribute="trailing" id="Bdg-cA-dMK"/>
+                            <constraint firstItem="GcF-q1-Mxw" firstAttribute="leading" secondItem="eci-HH-w0J" secondAttribute="leading" id="KAR-KD-jTC"/>
+                            <constraint firstItem="GcF-q1-Mxw" firstAttribute="top" secondItem="eci-HH-w0J" secondAttribute="topMargin" constant="6" id="kYK-9e-9f2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="GcF-q1-Mxw" id="2Ib-hM-VwX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psw-o8-nIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3633" y="694"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="ncM-ew-tEd">
