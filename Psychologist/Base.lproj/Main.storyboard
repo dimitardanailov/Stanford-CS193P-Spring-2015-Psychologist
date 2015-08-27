@@ -67,8 +67,8 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="t4P-Oe-BeE"/>
                                         <exclude reference="XP7-uC-XBU"/>
+                                        <exclude reference="t4P-Oe-BeE"/>
                                     </mask>
                                 </variation>
                                 <connections>
