@@ -17,6 +17,7 @@
 		085852BC1B8DF79B00F7D765 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085852BA1B8DF79B00F7D765 /* HappinessViewController.swift */; };
 		085852BE1B8F0CAD00F7D765 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085852BD1B8F0CAD00F7D765 /* TextViewController.swift */; };
 		085852C01B8F0EEB00F7D765 /* DiagnosedHappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085852BF1B8F0EEB00F7D765 /* DiagnosedHappinessViewController.swift */; };
+		085D69771B90719F00FA2EC5 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D69761B90719F00FA2EC5 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		085852BA1B8DF79B00F7D765 /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
 		085852BD1B8F0CAD00F7D765 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		085852BF1B8F0EEB00F7D765 /* DiagnosedHappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosedHappinessViewController.swift; sourceTree = "<group>"; };
+		085D69761B90719F00FA2EC5 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				085852B91B8DF79B00F7D765 /* FaceView.swift */,
 				085852BA1B8DF79B00F7D765 /* HappinessViewController.swift */,
+				085D69761B90719F00FA2EC5 /* UIViewController.swift */,
 				0858529B1B8DEDA700F7D765 /* PsychologistViewController.swift */,
 				0858529D1B8DEDA700F7D765 /* Main.storyboard */,
 				085852BD1B8F0CAD00F7D765 /* TextViewController.swift */,
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085D69771B90719F00FA2EC5 /* UIViewController.swift in Sources */,
 				085852BE1B8F0CAD00F7D765 /* TextViewController.swift in Sources */,
 				0858529C1B8DEDA700F7D765 /* PsychologistViewController.swift in Sources */,
 				0858529A1B8DEDA700F7D765 /* AppDelegate.swift in Sources */,
